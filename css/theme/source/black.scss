@@ -1,0 +1,106 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+//@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+//@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700');
+//@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #000;
+
+$mainColor: #fffef1;
+$headingColor: #ffb400;
+
+$monospaceFont: 'Input', monospace;
+$mainFontSize: 48px;
+$mainFont: 'Source Serif Pro', Helvetica, sans-serif;
+$headingFont: 'Source Serif Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #ffb400;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.slides .header{
+  position:absolute;
+  top: -50%;
+  left: -50%;
+}
+.slides .footer{
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 0.25em;
+}
+
+.reveal pre {
+    box-shadow: none;
+}
+
+.reveal blockquote {
+    background: none;
+}
+
+.blink_me {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.reveal div .namemail {
+    margin-top: 6em;
+    font-size: 0.5em;
+    color: #8f8f8f;
+}
+
+.reveal div .namemail a {
+    color: #02D35F;
+}
+
+.reveal pre code {
+    font-size: 28px;
+}
+
+strike {
+    color: #e74c3c;
+}
+
